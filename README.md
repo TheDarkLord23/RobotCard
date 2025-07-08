@@ -3,7 +3,7 @@
 A responsive React dashboard application for monitoring and managing delivery robots.  
 Built with **React** and **Vite** as part of the Holloid assignment challenge.
 
-## 📸 Preview
+### Preview
 
 ![Dashboard Screenshot](./Delivery-Robot-Card/screenshot.png)
 
@@ -16,7 +16,7 @@ Built with **React** and **Vite** as part of the Holloid assignment challenge.
 - **Flexible sorting**: Sort robots by ID, battery level, or ETA in ascending/descending order.
 - **Responsive design**: Optimized for desktop, tablet and mobile devices.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
