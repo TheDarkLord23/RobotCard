@@ -3,13 +3,9 @@
 A responsive React dashboard application for monitoring and managing delivery robots.  
 Built with **React** and **Vite** as part of the Holloid assignment challenge.
 
----
-
 ## 📸 Preview
 
 ![Dashboard Screenshot](./Delivery-Robot-Card/screenshot.png)
-
----
 
 ## Features
 
@@ -19,8 +15,6 @@ Built with **React** and **Vite** as part of the Holloid assignment challenge.
 - **Dynamic filtering**: Filter robots by status (On Delivery, Idle, Charging, Error, Returning).
 - **Flexible sorting**: Sort robots by ID, battery level, or ETA in ascending/descending order.
 - **Responsive design**: Optimized for desktop, tablet and mobile devices.
-
----
 
 ## 🚀 Getting Started
 
@@ -67,8 +61,6 @@ Delivery-Robot-Card/
 ├── package.json
 ```
 
----
-
 ## Usage
 
 - **Filter**: Click "Filter" to select/deselect robot statuses. "Clear all" resets filters.
@@ -76,8 +68,6 @@ Delivery-Robot-Card/
 - **Return to Base**: Click the button on any card (enabled only for robots on delivery) to change the status to "Returning".
 - **Tooltip**: Hover the disabled "Return to Base" for usage info.
 - **Responsive**: Try resizing your browser or using on mobile.
-
----
 
 ## License
 
