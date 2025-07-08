@@ -7,7 +7,7 @@ Built with **React** and **Vite** as part of the Holloid assignment challenge.
 
 ## 📸 Preview
 
-![Dashboard Screenshot](./screenshot.png)
+![Dashboard Screenshot](./Delivery-Robot-Card/screenshot.png)
 
 ---
 
