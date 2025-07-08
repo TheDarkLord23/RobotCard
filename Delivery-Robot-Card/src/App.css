@@ -1,42 +1,238 @@
+body,
+html,
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  font-family: "Roboto", system-ui, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+.body {
+  display: block;
+}
+#root > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+:root {
+  --status-on-delivery: #689f38;
+  --status-idle: #fbc02d;
+  --status-charging: #00acc1;
+  --status-error: #d84315;
+  --status-returning: #1976d2;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dashboardHeader {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.dashboardTitle {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
+.dashboardSubtitle {
+  font-size: 15px;
   color: #888;
+  margin-top: 5px;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.filterDropdownBtn {
+  border: #616161 2px solid;
+  background-color: transparent;
+  color: #000;
+}
+
+.filterDropdownBtn:focus {
+  outline: none;
+}
+
+.filterDropdownBtn:hover {
+  border-color: #616161;
+  background-color: #616161;
+  color: #fff;
+}
+
+.filterDropdownWrap {
+  position: relative;
+}
+
+.filterDropdownMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  border-radius: 15px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 10;
+  min-width: 150px;
+}
+
+.filterStatusBtn {
+  background: #eee;
+  color: #616161;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 4px 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filterStatusBtn:focus {
+  outline: none;
+}
+
+.filterStatusBtn.on-delivery.selected,
+.filterStatusBtn.on-delivery:hover {
+  background: #689f38;
+  color: #fff;
+}
+
+.filterStatusBtn.idle.selected,
+.filterStatusBtn.idle:hover {
+  background: #fbc02d;
+  color: #fff;
+}
+
+.filterStatusBtn.charging.selected,
+.filterStatusBtn.charging:hover {
+  background: #00acc1;
+  color: #fff;
+}
+
+.filterStatusBtn.error.selected,
+.filterStatusBtn.error:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.filterStatusBtn.returning.selected,
+.filterStatusBtn.returning:hover {
+  background: #1976d2;
+  color: #fff;
+}
+
+.clearAllBtn {
+  margin-top: 10px;
+  background: #616161;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+
+.clearAllBtn:hover,
+.clearAllBtn:focus {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+}
+
+.sortDropdownBtn {
+  border: #616161 2px solid;
+  background-color: transparent;
+  color: #000;
+  margin-left: 20px;
+}
+
+.sortDropdownBtn:hover,
+.sortDropdownBtn:focus {
+  border-color: #616161;
+  background-color: #616161;
+  color: #fff;
+  outline: none;
+}
+
+.sortDropdownMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  border-radius: 15px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 10;
+  min-width: 150px;
+}
+
+.sortOptionBtn {
+  background: #eee;
+  color: #616161;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 4px 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sortOptionBtn:hover,
+.sortOptionBtn.selected {
+  background: #616161;
+  color: #fff;
+}
+.orderBtn {
+  border-color: #616161;
+  background-color: #616161;
+  color: #fff;
+}
+
+.orderBtn:hover {
+  border-color: #616161;
+}
+
+@media (max-width: 768px) {
+  .dashboardHeader {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0;
+  }
+  .dashboardHeader > div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .headerButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
 }

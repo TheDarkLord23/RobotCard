@@ -47,4 +47,52 @@ export const robots = [
       estimatedDelivery: "2025-04-03T10:11:00Z",
     },
   },
+  {
+    robotId: "R1D4",
+    model: "V2",
+    status: "Error",
+    batteryLevel: 76,
+    location: {
+      latitude: -43.058,
+      longitude: -118.2437,
+    },
+    currentOrder: {
+      orderId: "ORD-12347",
+      customerName: "Customer Customer",
+      deliveryAddress: "Vienna, Holloid",
+      estimatedDelivery: "2025-04-03T10:11:00Z",
+    },
+  },
+  {
+    robotId: "R1D5",
+    model: "V2",
+    status: "Charging",
+    batteryLevel: 7,
+    location: {
+      latitude: -43.058,
+      longitude: -118.2437,
+    },
+    currentOrder: {
+      orderId: "ORD-12347",
+      customerName: "Customer Customer",
+      deliveryAddress: "Vienna, Holloid",
+      estimatedDelivery: "2025-04-03T10:11:00Z",
+    },
+  },
+  {
+    robotId: "R1D6",
+    model: "V2",
+    status: "Returning",
+    batteryLevel: 70,
+    location: {
+      latitude: -43.058,
+      longitude: -118.2437,
+    },
+    currentOrder: {
+      orderId: "ORD-12347",
+      customerName: "Customer Customer",
+      deliveryAddress: "Vienna, Holloid",
+      estimatedDelivery: "2025-04-03T10:11:00Z",
+    },
+  },
 ];

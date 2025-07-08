@@ -1,0 +1,183 @@
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(336px, 1fr));
+  gap: 60px 20px;
+  justify-items: center;
+  align-items: start;
+  width: 90vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 336px;
+  box-sizing: border-box;
+}
+.statusBar {
+  position: relative;
+  width: 140px;
+  height: 32px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.statusBar::after {
+  content: "";
+  position: absolute;
+  right: -32px;
+  bottom: 0;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.statusBar::before {
+  content: "";
+  position: absolute;
+  right: -16px;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  background: inherit;
+  border-bottom-right-radius: 0;
+  z-index: 1;
+}
+
+.leftFix {
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  width: 16px;
+  height: 16px;
+  background: inherit;
+  z-index: 1;
+  border-bottom-left-radius: 0;
+}
+
+.inner {
+  position: relative;
+  border: 2px solid;
+  border-radius: 14px;
+  width: 100%;
+  background: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+  z-index: 2 !important;
+}
+
+.idContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.id {
+  font-weight: 700;
+  font-size: 17px;
+  color: #000;
+}
+
+.model {
+  font-weight: 600;
+  font-size: 16px;
+  color: #adadad;
+}
+
+.batteryPrecentage {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.batteryBarContainer {
+  border-radius: 8px;
+  height: 12px;
+  margin: 8px 0;
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
+.batteryBar {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.4s;
+}
+
+.orderInfo {
+  background: #f5f5f5;
+  background: #e0e0e0;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 25px 0;
+  width: 100%;
+  min-height: 130px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.orderRow {
+  color: #000;
+  font-size: 15px;
+}
+
+.orderRowSecondary {
+  color: #a0a0a0;
+  font-size: 15px;
+}
+
+.orderValue {
+  font-weight: 600;
+}
+
+.returnBtn {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  background: #616161;
+  transition: background 0.2s;
+}
+
+.returnBtn:hover {
+  background: #000;
+}
+
+.returnBtn:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.location {
+  font-size: 12px;
+  color: #9c9c9c;
+  text-align: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 90%;
+    padding: 12px;
+  }
+  .cardGrid {
+    gap: 12px 30px;
+  }
+}
