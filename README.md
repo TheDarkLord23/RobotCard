@@ -33,14 +33,20 @@ Built with **React** and **Vite** as part of the Holloid assignment challenge.
    npm install
    ```
 
-3. Run the app locally
+3. Get to the app location
+
+   ```bash
+   cd Delivery-Robot-Card
+   ```
+
+4. Run the app locally
 
    ```bash
    npm run dev
    ```
 
-4. Open your browser
-   - Visit `http://localhost:5174`
+5. Open your browser
+   - Visit `http://localhost:5173`
 
 ## Project Structure
 
